@@ -2,11 +2,11 @@
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>slate-hogan</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Hogan.js adapter for slate</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -17,12 +17,15 @@
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+slate = require 'slate'
+hogan = require 'slate-hogan'
+
+server = slate.create()
+server.root "#{__dirname}/public"
+server.enable 'mime', 'static'
+server.engine 'mustache', hogan, {your: 'template data'}
+server.start 8080
 ```
-
-## Examples
-
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
 
 ## LICENSE
 

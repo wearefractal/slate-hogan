@@ -1,3 +1,4 @@
-require('node-log').setName 'APPNAME'
+hogan = require 'hogan.js'
 
-module.exports = {}
+module.exports = (template, data, options) -> 
+  hogan.compile(template).render data
